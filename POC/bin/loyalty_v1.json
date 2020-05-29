@@ -1,0 +1,54 @@
+{
+	"statusMessage": "Success",
+	"statusCode": "200",
+	"availableOffers": [],
+	"awardedOffers": [],
+	"pointsBalance": {
+		"createdAt": 1572622372448,
+		"updatedAt": 1572622372448,
+		"createdBy": null,
+		"updatedBy": null,
+		"cfaOneId": "CFAID-NMFUTGEG08WMJRLT",
+		"accumulatedPoints": 0,
+		"lifetimePoints": 0,
+		"customerMilestoneDate": 1572622372447,
+		"dateCurrentTierReached": 1572622372447,
+		"loyaltyTierExpirationDate": 1604188800000,
+		"nextTierAssessmentDate": 1604188800000,
+		"pointsBalance": 0,
+		"version": 1,
+		"loyaltyTiers": [
+			{
+				"name": "Chick-fil-a One",
+				"tierLevel": 1,
+				"startRange": 0,
+				"endRange": 999.99,
+				"pointsToMaintain": 0,
+				"pointsToReach": 0,
+				"currentTier": true
+			},
+			{
+				"name": "Silver",
+				"tierLevel": 2,
+				"startRange": 1000,
+				"endRange": 4999.99,
+				"pointsToMaintain": 1000,
+				"pointsToReach": 1000,
+				"currentTier": false
+			},
+			{
+				"name": "Red",
+				"tierLevel": 3,
+				"startRange": 5000,
+				"endRange": 9999999.99,
+				"pointsToMaintain": 5000,
+				"pointsToReach": 5000,
+				"currentTier": false
+			}
+		]
+	}
+}
+
+
+
+

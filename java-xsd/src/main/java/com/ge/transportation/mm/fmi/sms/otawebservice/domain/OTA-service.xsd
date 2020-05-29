@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+
+  <xs:complexType name="downloadSWFileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SPInfoByRoadNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="customerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aarRoad" type="xs:string"/>
+      <xs:element minOccurs="0" name="roadNumber" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="profileList" nillable="true" type="ServiceProgramInfoResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceProgramInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="programNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="programType" type="xs:string"/>
+      <xs:element name="packageId" type="xs:int"/>
+      <xs:element minOccurs="0" name="programTitle" type="xs:string"/>
+      <xs:element minOccurs="0" name="programDescription" type="xs:string"/>
+      <xs:element minOccurs="0" name="profileName" type="xs:string"/>
+      <xs:element name="profileId" type="xs:int"/>
+      <xs:element name="profileStatus" type="xs:int"/>
+      <xs:element name="otaPriority" type="xs:int"/>
+      <xs:element name="serviceSheetStatusCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="completionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="pendingClosure" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="taskDetailsLst" nillable="true" type="ProfileTaskDetail"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="profileLocoInfoLst" nillable="true" type="ProfileLocomotiveDetail"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="bomSoftwaresLst" nillable="true" type="ProfileBOMSoftwareDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProfileTaskDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="displaySequence" type="xs:string"/>
+      <xs:element minOccurs="0" name="taskDescription" type="xs:string"/>
+      <xs:element minOccurs="0" name="prePostInstall" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProfileLocomotiveDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="customerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aarRoad" type="xs:string"/>
+      <xs:element minOccurs="0" name="roadNumber" type="xs:string"/>
+      <xs:element name="serviceSheetStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="completionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="pendingClousre" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProfileBOMSoftwareDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileSoftwareVersion" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileController" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileSize" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileTimestamp" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileLoadingOrder" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceProgramInfoRequest">
+    <xs:sequence>
+      <xs:element name="profileId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="spInfoByRoadNumberRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aarRoad" type="xs:string"/>
+      <xs:element minOccurs="0" name="roadNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DownloadSWFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileData" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="checkSum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
